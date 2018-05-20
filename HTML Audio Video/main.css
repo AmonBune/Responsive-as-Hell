@@ -1,0 +1,104 @@
+.background {
+	background-color: green;
+
+	animation: colorchange 10s 999999; /* animation-name followed by duration in seconds*/
+	-webkit-animation: colorchange 10s 999999; /* Chrome and Safari */
+	
+	font-family: Impact;
+	font-size: 24pt;
+}
+
+@keyframes colorchange
+{
+	0%   {background: red;}
+	25%  {background: yellow;}
+	50%  {background: blue;}
+	75%  {background: green;}
+	100% {background: red;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+	0%   {background: red;}
+	25%  {background: yellow;}
+	50%  {background: blue;}
+	75%  {background: green;}
+	100% {background: red;}
+}
+
+h1 {
+	font-size: 72pt;
+	color: black;
+	text-shadow: 1px 1px 2px black, 0 0 1em red, 0 0 0.2em red;
+	text-align: center;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+p {
+	display: block;
+	margin: 10px;
+	padding: 10px;
+	
+	text-decoration: none;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+	text-align: center;
+	
+	background-color: rgba(0,0,0,0.5);
+}
+
+.single_quote {
+	display: block;
+	margin: 10px;
+	padding: 10px;
+	
+	text-decoration: none;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+	text-align: center;
+	
+	background-color: rgba(0,0,0,0.5);
+	
+	-ms-transform: rotate(0deg); /* IE 9 */
+	-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+	transform: rotate(0deg);
+}
+
+.red {
+	color: rgb(238,64,53);
+	
+	-ms-transform: rotate(-1deg); /* IE 9 */
+	-webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
+	transform: rotate(-0.2deg);
+}
+
+.orange {
+	color: rgb(243,119,55);
+	
+	-ms-transform: rotate(-0.1deg); /* IE 9 */
+	-webkit-transform: rotate(-0.1deg); /* Chrome, Safari, Opera */
+	transform: rotate(-0.1deg);
+}
+
+.yellow {
+	color: rgb(249,233,122);
+	
+	-ms-transform: rotate(0.1deg); /* IE 9 */
+	-webkit-transform: rotate(0.1deg); /* Chrome, Safari, Opera */
+	transform: rotate(0.1deg);
+}
+
+.green {
+	color: rgb(122,192,67);
+	
+	-ms-transform: rotate(1deg); /* IE 9 */
+	-webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+	transform: rotate(0.2deg);
+}

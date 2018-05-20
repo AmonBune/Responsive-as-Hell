@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Art Direction mit "picture" und "source"</title>
+
+        <style>
+            #imageContainer {
+                max-width: 600px;
+                border: 2px solid black;
+                margin: 0 auto;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body class="background">
+		<h1>Art Direction mit <i>picture</i> und <i>source</i></h1>
+	
+        <div id="imageContainer">
+            <!-- Fügen Sie an dieser Stelle das picture-Element mit mehreren source-Elementen ein! -->
+			<picture>
+			<source media="(min-width: 45em)"
+					srcset="images/horizontal.jpg" />
+					
+			<source srcset="images/vertikal.jpg" />
+			
+			<img src="images/horizontal.jpg">
+			</picture
+        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="main.css">
+        <title>Übungen zum Thema "Responsive Images"</title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript">
+			window.onload = function()
+			{
+				// Sleep time expects milliseconds
+				function sleep(time)
+				{
+					return new Promise((resolve) => setTimeout(resolve, time));
+				}
+				
+				change_colors = function()
+				{
+					var elements = document.getElementsByClassName("single_quote");
+					for (var i = 0; i < elements.length; i++)
+					{
+						// Generate classname
+						var random_number = Math.floor(Math.random() * 4) + 1; // Generate random number from 1-4
+						
+						if (random_number == 1)
+						{
+							var class_to_add = "red";
+						}
+						else if (random_number == 2)
+						{
+							var class_to_add = "orange";
+						}
+						else if (random_number == 3)
+						{
+							var class_to_add = "yellow";
+						}
+						else if (random_number == 4)
+						{
+							var class_to_add = "green";
+						}
+						
+						// Replace class name
+						elements[i].className = "single_quote " + class_to_add;
+					}
+					
+					// Do it again after X milliseconds
+					sleep(6).then(() => {
+						change_colors();
+					});
+				}
+				
+				change_colors();
+			}
+		</script>
+    </head>
+    <body class="background">
+		<h1>Responsive Images</h1>
+	
+        <h2>Auf den nachfolgenden Seiten sind die Lösungen zu den einzelnen Teilaufgaben zu finden</h2>
+
+		<a class="single_quote" target="_blank" href="Fluid Images.html">Fluid Images</a>
+		<a class="single_quote" target="_blank" href="srcset1.html">Optimierung für Viewports mit <i>srcset 1</i></a>
+		<a class="single_quote" target="_blank" href="srcset2.html">Optimierung für unterschiedliche Display-Qualitäten mit <i>srcset 2</i></a>
+		<a class="single_quote" target="_blank" href="Flexible Sizes.html">Bilder in flexiblen, mehrspaltigen Layouts</a>
+		<a class="single_quote" target="_blank" href="Art Direction.html">Art Direction mit <i>picture</i> und <i>source</i></a>
+    </body>
+</html>

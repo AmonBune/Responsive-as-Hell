@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="main.css">
+        <title>Lightbox Demo</title>
+
+        <style>
+
+            html {
+                height: 100%;
+            }
+
+            body {
+                height: 100%;
+                position: relative;
+                margin: 0;
+            }
+
+            #page-content {
+                margin: auto;
+                max-width: 1000px;
+                height: 100%;
+            }
+
+            h1 {
+                margin: 0;
+                padding: 1rem 0;
+            }
+
+            #image-container {
+                font-size: 0;
+            }
+
+            .image-box {
+                display: inline-block;
+                width: 50%;
+            }
+
+            .image-box img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .image-box.lightbox {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                text-align: center;
+            }
+
+            .image-box.lightbox img {
+                position: relative;
+                top: 50%;
+                width: auto;
+                height: auto;
+                max-width: 90%;
+            }
+
+        </style>
+    </head>
+    <body class="background">
+
+        <div id="page-content">
+
+            <h1>Lightbox Demo</h1>
+
+            <div id="image-container">
+
+                <div class="image-box" onclick="toggleLightbox(this);">
+                    <img src="images/small.jpg" alt="small image"/>
+                </div>
+
+                <div class="image-box" onclick="toggleLightbox(this);">
+                    <img src="images/medium.jpg" alt="medium image"/>
+                </div>
+
+                <div class="image-box" onclick="toggleLightbox(this);">
+                    <img src="images/large.jpg" alt="large image"/>
+                </div>
+
+                <div class="image-box" onclick="toggleLightbox(this);">
+                    <img src="images/small.jpg" alt="small image"/>
+                </div>
+
+                <div class="image-box" onclick="toggleLightbox(this);">
+                    <img src="images/medium.jpg" alt="medium image"/>
+                </div>
+
+                <div class="image-box" onclick="toggleLightbox(this);">
+                    <img src="images/large.jpg" alt="large image"/>
+                </div>
+
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+
+            function toggleLightbox(box) {
+                var image = box.querySelector("img");
+                var classes = box.className.split(" ");
+                var lightboxClass = "lightbox";
+
+                var positionOfLightboxClass = classes.indexOf(lightboxClass);
+
+                if (positionOfLightboxClass == -1) {
+                    box.className += " lightbox";
+
+                    var marginTop = image.height / 2;
+                    image.setAttribute('style', 'margin-top: -' + marginTop + "px");
+
+                } else {
+                    classes.splice(positionOfLightboxClass, 1);
+                    box.className = classes.join(" ");
+
+                    image.removeAttribute("style");
+                }
+
+            }
+
+        </script>
+
+    </body>
+</html>

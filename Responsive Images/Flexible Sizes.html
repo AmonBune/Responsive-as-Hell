@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <title>Bilder in flexiblen, mehrspaltigen Layouts</title>
+        <style>
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            @media screen and (min-width: 28em) {
+                img {
+                    width: 50%;
+                }
+            }
+
+            @media screen and (min-width: 50em) {
+                img {
+                    width: 33%;
+                }
+            }
+        </style>
+    </head>
+    <body class="background">
+	<h1>Bilder in flexiblen, mehrspaltigen Layouts</h1>
+	
+        <div id="imageContainer">			
+			<img src="images/large.jpg" srcset="images/small.jpg 400w, images/medium.jpg 500w, images/large.jpg 1000w"
+				 sizes="(min-width: 28em) 50vw, (min-width: 50em) 33.3vw,
+						100vw"></img>
+        </div>
+
+        <!-- Der nachfolgende script-Block sorgt dafür, dass Ihr img-Element verfielfältigt wird -->
+        <script>
+            var imgContainer = document.getElementById('imageContainer');
+            var img = document.getElementsByTagName('img')[0];
+            imgContainer.innerHTML = null;  // Quizfrage: Wieso diese Zeile?
+            for (var i = 0; i < 12; i++) {
+                var clone = img.cloneNode(true);
+                clone.setAttribute('alt', 'Klon ' + i + 1);
+                imgContainer.appendChild(clone);
+            }
+        </script>
+    </body>
+</html>

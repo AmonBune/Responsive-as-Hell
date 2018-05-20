@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="main.css">
+		
+        <title>Multimedia-Dateiformate</title>
+        <style>
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            tr {
+                border: 1px solid black;
+            }
+
+            th {
+                text-align: left;
+            }
+
+            td {
+                text-align: left;
+            }
+
+            ul {
+                padding: 0 1rem;
+            }
+        </style>
+
+    </head>
+    <body class="background">
+
+        <table>
+
+            <h1>Charakterisierung des Dateiformats AAC</h1>
+
+            <tr id="name">
+                <th>Dateiformat</th>
+                <td>AAC</td>
+            </tr>
+
+            <tr id="long-name">
+                <th>Ausgeschriebener Name</th>
+                <td>Advanced Audio Coding</td>
+            </tr>
+
+            <tr id="media-type">
+                <th>Medientyp</th>
+                <td>
+                    <input type="checkbox" id="type-image" value="image" disabled="true"/>
+                    <label for="type-image">Bild</label><br/>
+                    <input type="checkbox" id="type-audio" value="audio" disabled="true" checked="true"/>
+                    <label for="type-audio">Audio</label><br/>
+                    <input type="checkbox" id="type-video" value="video" disabled="true"/>
+                    <label for="type-video">Video</label>
+                </td>
+            </tr>
+
+            <tr id="informationLoss">
+                <th>Informationsverlust</th>
+                <td>
+                    <input type="checkbox" id="lossless" value="lossless" disabled="true"/>
+                    <label for="lossless">verlustlos</label><br/>
+                    <input type="checkbox" id="lossy" value="lossy" disabled="true" checked="true"/>
+                    <label for="lossy">verlustbehaftet</label>
+                </td>
+            </tr>
+
+            <tr id="description">
+                <th>Kurzbeschreibung</th>
+                <td>
+                	<div>Advanced Audio Coding (AAC) ist ein von der Moving Picture Experts Group (MPEG) entwickeltes, verlustbehaftetes Audiodatenkompressionsverfahren, das als Weiterentwicklung von MPEG-2 Multichannel im MPEG-2-Standard spezifiziert wurde.</div>
+			<div>Bei geringerer Komplexität als MP3 sind bei gleicher Datenrate bessere Qualitäten erreichbar.</div>
+                </td>
+            </tr>
+
+            <tr id="advantages">
+                <th>Vorteile</th>
+                <td>
+                    <ul>
+                        <li>Bei gleicher Abtastrate bessere Soundqualität</li>
+                        <li>Bessere Kompression</li>
+                        <li>Keine ID3-Tag Versionsunterschiede</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr id="disadvantages">
+                <th>Nachteile</th>
+                <td>
+                    <ul>
+                        <li>Kein lossless Format</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr id="usageInWeb">
+                <th>Einsatz im Web</th>
+                <td>
+                    <div>Man kann das audio HTML tag dafür verwenden. Allerdings funktioniert dieses nicht in allen Browsern.</div>
+                </td>
+            </tr>
+
+            <tr id="example">
+                <th>Beispiel</th>
+                <td>
+			<audio controls>
+				<audio src="audio.aac" type="audio/aac" controls="true"></audio>
+			</audio>
+                </td>
+            </tr>
+
+            <tr id="sources">
+                <th>Verwendete Quellen</th>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="https://de.wikipedia.org/wiki/Advanced_Audio_Coding" target="_blank" title="https://de.wikipedia.org/wiki/Advanced_Audio_Coding">https://de.wikipedia.org/wiki/Advanced_Audio_Coding</a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/questions/15568884/how-can-i-use-html5-audio-tag-to-play-aac-file" target="_blank" title="http://stackoverflow.com/questions/15568884/how-can-i-use-html5-audio-tag-to-play-aac-file">http://stackoverflow.com/questions/15568884/how-can-i-use-html5-audio-tag-to-play-aac-file</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+        </table>
+
+    </body>
+</html>

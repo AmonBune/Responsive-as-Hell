@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="main.css">
+        <title>Video Browserkompatibilität</title>
+    </head>
+    <body class="background">
+		<h1>Video Browserkompatibilität</h1>
+
+        <!-- Teilaufgabe 1: Browserinkompatibilität mit dem <video> Element -->
+        <div class="browserCompatibilityCheck">
+            <h3>Browserinkompatibilität mit dem &lt;video&gt; Element</h3>
+            <div class="videoElement">
+                <video src="media/TheyDontCareAboutUs.mp4" controls="enabled">
+					<p>Video in mp4 format</p>
+				</video>
+            </div>
+            <div class="description">
+                <!-- Beschreiben Sie hier, was weshalb in welchen Browsern funktioniert oder eben nicht funktioniert -->
+            </div>
+        </div>
+
+        <!-- Teilaufgabe 2: Browserinkompatibilität mit einem spezifischen Video-Format -->
+        <div class="browserCompatibilityCheck">
+            <h3>Browserinkompatibilität mit einem spezifischen Video-Format</h3>
+            <div class="videoElement">
+                <video src="media/TheyDontCareAboutUs.webm" controls="enabled">
+					<p>Video in webm format</p>
+				</video>
+            <div class="description">
+                <!-- Beschreiben Sie hier, was weshalb in welchen Browsern funktioniert oder eben nicht funktioniert -->
+            </div>
+        </div>
+
+        <!-- Teilaufgabe 3: Verwendung verschiedener Video-Formate -->
+        <div class="browserCompatibilityCheck">
+            <h3>Verwendung verschiedener Video-Formate</h3>
+            <div class="videoElement">
+                <video src="media/TheyDontCareAboutUs.mp4" src="media/TheyDontCareAboutUs.webm" controls="enabled">
+					<p>Video in different formats</p>
+				</video>
+            </div>
+            <div class="description">
+                <!-- Beschreiben Sie hier, was weshalb in welchen Browsern funktioniert oder eben nicht funktioniert -->
+            </div>
+        </div>
+
+    </body>
+</html>

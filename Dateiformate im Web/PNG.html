@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="main.css">
+		
+        <title>Multimedia-Dateiformate</title>
+        <style>
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            tr {
+                border: 1px solid black;
+            }
+
+            th {
+                text-align: left;
+            }
+
+            td {
+                text-align: left;
+            }
+
+            ul {
+                padding: 0 1rem;
+            }
+        </style>
+
+    </head>
+	<body class="background">
+
+        <table>
+
+            <!-- TODO: Setzen Sie in der nachfolgenden Tabellenbeschriftung die Bezeichnung Ihres Dateiformats sowie Ihren vollständigen Namen ein! -->
+            <h1>Charakterisierung des Dateiformats PNG</h1>
+
+            <tr id="name">
+                <th>Dateiformat</th>
+                <td>PNG</td>
+            </tr>
+
+            <tr id="long-name">
+                <th>Ausgeschriebener Name</th>
+                <td>Portable Network Graphics</td>
+            </tr>
+
+            <tr id="media-type">
+                <th>Medientyp</th>
+                <td>
+                    <!-- TODO: Nachfolgend bei den zutreffenden Checkboxes das Attribut checked="checked" hinzufügen -->
+                    <input type="checkbox" id="type-image" value="image" disabled="true" checked="true"/>
+                    <label for="type-image">Bild</label><br/>
+                    <input type="checkbox" id="type-audio" value="audio" disabled="true"/>
+                    <label for="type-audio">Audio</label><br/>
+                    <input type="checkbox" id="type-video" value="video" disabled="true"/>
+                    <label for="type-video">Video</label>
+                </td>
+            </tr>
+
+            <tr id="informationLoss">
+                <th>Informationsverlust</th>
+                <td>
+                    <!-- TODO: Geben Sie hier an, ob es sich um ein verlustloses oder verlustbehaftetes Dateiformat handelt indem Sie bei den zutreffenden Checkboxes das Attribut checked="checked" hinzufügen -->
+                    <input type="checkbox" id="lossless" value="lossless" disabled="true" checked="true"/>
+                    <label for="lossless">verlustlos</label><br/>
+                    <input type="checkbox" id="lossy" value="lossy" disabled="true"/>
+                    <label for="lossy">verlustbehaftet</label>
+                </td>
+            </tr>
+
+            <tr id="description">
+                <th>Kurzbeschreibung</th>
+                <td>
+                    <div>PNG ist das meist verwendete verlustfreie Grafikformat im internet</div>
+                </td>
+            </tr>
+
+            <tr id="advantages">
+                <th>Vorteile</th>
+                <td>
+                    <ul>
+                        <li>Keine Lizenzgebüren</li>
+                        <li>Verlustfreie Kompression</li>
+                        <li>Unterstützung von Alpha-Transparenz</li>
+						<li>Durch integrierte Prüfsummen wird ermöglicht, Fehler in der Datei frühzeitig zu erkennen</li>
+					</ul>
+                </td>
+            </tr>
+
+            <tr id="disadvantages">
+                <th>Nachteile</th>
+                <td>
+                    <ul>
+                        <li>Keine Möglichkeit zur Animation</li>
+                        <li>Unterstützt das CMYK-Farbmodell nicht und ist deshalb nicht als vollständiger TIFF-Ersatz geeignet</li>
+                        <li>Ermöglicht nicht das einfache Laden von Bildteilen</li>
+					</ul>
+                </td>
+            </tr>
+
+            <tr id="usageInWeb">
+                <th>Einsatz im Web</th>
+                <td>
+                    <div>Logos, Banner, Icons, Balken und so weiter</div>
+                </td>
+            </tr>
+
+            <tr id="example">
+                <th>Beispiel</th>
+                <td>
+                    <img src="http://ap.lanexdev.com/user_images/Discovery/image/magazine/2012/04-12/Burning-in-Fire-123rf-11551751_xxl.png"></img>
+                </td>
+            </tr>
+
+            <tr id="sources">
+                <th>Verwendete Quellen</th>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="https://de.wikipedia.org/wiki/Portable_Network_Graphics" target="_blank" title="Name der Quelle 1">Wikipedia</a>
+                        </li>
+                        <li>
+                            <a href="http://www.pctipp.ch/tipps-tricks/kummerkasten/multimedia/artikel/gif-png-jpg-welches-dateiformat-wofuer-83483/" target="_blank" title="Name der Quelle 2">PCTIPP</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+            <!-- TODO: Geschafft! Entfernen Sie zum Schluss alle TODO-Kommentare aus dem Quellcode! -->
+
+        </table>
+
+    </body>
+</html>
